@@ -330,7 +330,10 @@ header{
 }
 
 .project-card:hover img{
-    opacity: 0.4;
+    opacity: 0.1;
+}
+.project-card-img {
+    border-radius: 20px;
 }
 
 .project-card:hover .open-window {

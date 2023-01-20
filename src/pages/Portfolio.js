@@ -14,32 +14,27 @@ const onOpenModal = () => {
             <div className="portfolio-title">
                 <h2>— Portfolio —</h2>
             </div>
-            
-            <div className='project-card-bg' >
-                { projects.length > 0 ?
-                
+            <div>
+            { projects.length > 0 ?
+                <div className='project-card-bg' >
                     {projects.map(project => (
                         <div className="container-projects">
-
-                        <div className="project-card" key={project.id}>
-                            <img className="project-card-img" src={project.image} style={{width: "300px", height: "250px"}} />
-                            <button
-                            className="open-window"
-                            onClick={onOpenModal} >
-                                <b>Details</b>
-                            </button>
-                        </div>
+                            <div className="project-card" key={project.id}>
+                                <img className="project-card-img" src={project.image} style={{width: "300px", height: "250px"}} />
+                                <button
+                                className="open-window"
+                                onClick={onOpenModal} >
+                                    <b>Details</b>
+                                </button>
+                            </div>
                         </div>
                     ))
-                    }
-                    
-                    
-                </div>
+                    }    
+                </div>    
                 :
                 <p > no projects!</p>
                 }
             </div>
-            
         </section>
     )
 }
