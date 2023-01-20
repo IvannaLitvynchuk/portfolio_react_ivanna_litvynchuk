@@ -1,0 +1,365 @@
+:root {
+    --dark-red: rgba(128,0,0,0.8);
+    
+}
+
+.nav{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    z-index: 20;
+    position: fixed;
+}
+.nav-links{
+    width: 100%;
+    /* max-width: 1366px; */
+    height: 50px;
+
+
+}
+.nav ul{
+    background: rgba(128,0,0,0.8);
+    margin: 0;
+    display: flex;
+    text-align: center;
+    list-style: none;
+    justify-content: flex-end;
+}
+.nav ul li{
+    text-transform: uppercase;
+    height: 50px;
+}
+
+li a{
+    height: 50px;
+    width: 150px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-family: 'Mukta', sans-serif;
+    letter-spacing: 3px;
+    line-height: 3em;
+}
+li a:hover{
+    background-color: wheat;
+    color: black;
+    font-weight: bold;
+}
+
+.hamburger
+{
+    width: 30px;
+    padding: 10px 0;
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    z-index: 1;
+    display: none;
+    font-size: 0;
+    color: transparent;
+    border: 0;
+    background: none;
+    cursor: pointer;
+
+}
+
+.hamburger:focus
+{
+    outline: 0;
+}
+
+.hamburger__item
+{
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: coral;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    transition: background .2s linear;
+
+}
+
+.hamburger.active .hamburger__item
+{
+    background: none
+}
+
+.hamburger__item:before,
+.hamburger__item:after
+{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: coral;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    transition: transform .2s linear;
+
+}
+
+.hamburger__item:before
+{
+    top: -8px;
+}
+
+.hamburger__item:after
+{
+    bottom: -8px;
+}
+
+.hamburger.active .hamburger__item:before
+{
+    transform-origin: left top;
+    transform: rotate(45deg) translate3d(0px, -3px, 0);
+}
+
+.hamburger.active .hamburger__item:after
+{
+    transform-origin: left bottom;
+    transform: rotate(-45deg) translate3d(0px, 3px, 0);
+}
+
+/* Home */
+
+header{
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    background-image: url("https://pishondesigns.org/Dbase/wp-content/uploads/2017/09/Work-from-Home.jpg");
+
+}
+
+.header-title{
+    padding-top: 30%;
+}
+.title{
+    text-align: center;
+    color: black;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 45px;
+    padding-left: 20px;
+    width: 60%;
+    background-color: rgba(128,128,128,0.5);
+}
+
+/* About */
+.about{
+    width: 100%;
+    height: 100vh;
+    min-height: 870px;
+    background-color: burlywood;
+
+}
+.about-title{
+    text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+    padding-top: 60px;
+    font-size: 30px;
+    margin: 0;
+}
+
+.about-content{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 40px;
+    margin-top: 50px;
+}
+.image img{
+    border-radius: 50%;
+    border: 1px double black;
+}
+
+.text{
+    font-size: 20px;
+    font-family: 'Yusei Magic', sans-serif;
+    width: 40%;
+}
+
+/* Portfolio */
+.portfolio{
+    width: 100%;
+    height: auto;
+    background-color: darksalmon;
+}
+.portfolio-title{
+    text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.portfolio-project{
+    text-align: center;
+}
+
+.name-project{
+    font-family: 'Mukta', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    width: 650px;
+    margin: auto;
+    text-align: left;
+}
+
+.open-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 7px 30px;
+    background: white;
+    color: maroon;
+    font-size: 17px;
+    border: 2px solid white;
+    cursor: pointer;
+    outline: none;
+    /* animation: background-change 3s infinite; */
+    /* z-index: 10; */
+    opacity: 0;
+}
+
+@keyframes background-change {
+    from {
+        background: transparent;
+    }
+    50% {
+        background: rgb(255, 255, 255, 0.9);
+    }
+    to {
+        background: transparent;
+    }
+}
+
+
+/* .open-window:hover{
+    background: rgba(255, 255, 255, 0.5);
+    padding: 130px 170px;
+    border-radius: 20px;
+    font-size: 20px;
+} */
+
+.window{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* visibility: hidden; */
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s;
+}
+/* .window-active{
+    visibility: visible;
+    opacity: 1;
+} */
+
+.modal-window{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 0 20px 10px;
+    width: 60%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+
+.window-title{
+    font-size: 30px;
+    color: dimgrey;
+
+}
+
+.window-text{
+    font-size: 13px;
+}
+
+.close-window{
+    width: 15%;
+    height: 15%;
+    margin: auto;
+    font-size: 15px;
+    padding: 8px 10px;
+    color: white;
+    background: black;
+    border: none;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    outline: none;
+}
+.container-projects {
+    position: relative;
+}
+.project-card-bg {
+    width: 90%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 50px;
+    grid-row-gap: 1em;
+    padding: 10px;
+    margin: auto;
+}
+.project-card {
+    height: 250px;
+    background-color: rgb(255, 255, 255, 0.5);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 0;
+    z-index: 2;
+}
+
+.project-card:hover img{
+    opacity: 0.4;
+}
+
+.project-card:hover .open-window {
+    z-index: 3;
+    opacity: 1;
+    border: 1px solid var(--dark-red);
+    animation: background-change 3s infinite;
+}
+
+
+/* Contacts */
+.contacts{
+    width: 100%;
+    height: 100vh;
+    min-height: 200px;
+    background-color: bisque;
+}
+.contacts-title{
+    text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+    padding-top: 40px;
+    font-size: 20px;
+}
+.contacts-text{
+    display: flex;
+    font-size: 20px;
+    justify-content: space-around;
+    font-weight: 700;
+    font-family: 'Mukta', sans-serif;
+    color: darkred;
+}
+
