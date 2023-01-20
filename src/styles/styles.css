@@ -343,6 +343,16 @@ header{
     animation: background-change 3s infinite;
 }
 
+.modal-wrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+
 
 /* Contacts */
 .contacts{
