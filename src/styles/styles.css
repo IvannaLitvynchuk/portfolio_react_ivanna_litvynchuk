@@ -172,7 +172,7 @@ header{
     margin-top: 50px;
 }
 .image img{
-    border-radius: 50%;
+    /* border-radius: 50%; */
     border: 1px double black;
 }
 
