@@ -1,6 +1,17 @@
 import { Link } from 'react-router-dom'
 
 export default function Navigation() {
+
+    const navMenu = document.querySelector(".hamburger");
+    const navBarLinks = document.querySelector(".nav-links");
+
+    navMenu.addEventListener('click', function () {
+        navBarLinks.classList.toggle("active");
+    });
+    navMenu.addEventListener('click', function () {
+        navMenu.classList.toggle("active");
+    });
+
     return (
         <nav className="nav">
             <button className="hamburger" id="nav_toggle" type="button">
