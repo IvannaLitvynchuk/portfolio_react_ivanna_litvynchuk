@@ -1,23 +1,22 @@
+import React, {useState} from 'react'
 import { Link } from 'react-router-dom'
 
 export default function Navigation() {
 
-    const navMenu = document.querySelector(".hamburger");
-    const navBarLinks = document.querySelector(".nav-links");
+    const [activeClass, setActiveClass] = useState(false)
+    const activeHamburger = activeClass ? "hamburger active" : "hamburger"
+    const activeNavLinks = activeClass ? "nav-links active" : "nav-links"
 
-    navMenu.addEventListener('click', function () {
-        navBarLinks.classList.toggle("active");
-    });
-    navMenu.addEventListener('click', function () {
-        navMenu.classList.toggle("active");
-    });
+    const navToggle = () => {
+        setActiveClass(!activeClass)
+    }
 
     return (
         <nav className="nav">
-            <button className="hamburger" id="nav_toggle" type="button">
+            <button className={activeHamburger} id="nav_toggle" type="button" onClick={navToggle}>
                 <span className="hamburger__item">Menu</span>
             </button>
-            <div className="nav-links">
+            <div className={activeNavLinks}>
                 <ul>
                     <li><Link to="/">Home</Link> </li>
                     <li><Link to="/about">About me</Link></li>
