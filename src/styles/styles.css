@@ -250,13 +250,14 @@ header{
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0,0,0,0.6);
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 9;
     /* visibility: hidden; */
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s;
+    /* opacity: 0; */
+    /* transition: visibility 0s, opacity 0.5s; */
 }
 /* .window-active{
     visibility: visible;
@@ -351,7 +352,6 @@ header{
     height: 100vh;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    background-color: rgba(0,0,0,0.5);
 }
 
 
