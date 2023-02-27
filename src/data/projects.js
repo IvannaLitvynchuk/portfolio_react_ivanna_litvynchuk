@@ -10,25 +10,25 @@ export const projects = [
     {
         id: 2,
         title: "Virtual piano",
-        description: "I did this project when I was studying the frontend on HyperSkill. I created a web page with flip-down flash cards,learned some HTML basics and learned that CSS can easily make a beautiful design.",
+        description: "I did this project when I was studying the frontend on HyperSkill. I created a web page with virtual piano, learned some Javascript basics and learned that CSS can easily make a beautiful design.",
         link_into_github: "https://github.com/IvannaLitvynchuk/virtual_piano",
         link_into_site: "https://github.com/IvannaLitvynchuk/virtual_piano",
         image: "https://imgs.classicfm.com/images/218395?crop=16_9&width=660&relax=1&signature=q7SbbezAL_Tgo3vNAh8Ef7mm1oU="
     },
     {
         id: 3,
-        title: "Project 3",
-        description: "I did this project when I was studying the frontend on HyperSkill. I created a web page with flip-down flash cards,learned some HTML basics and learned that CSS can easily make a beautiful design.",
-        link_into_github: "https://github.com/IvannaLitvynchuk/Flashcards",
-        link_into_site: "https://github.com/IvannaLitvynchuk/Flashcards",
-        image: "https://raw.githubusercontent.com/IvannaLitvynchuk/Portfolio/main/img/flashcards.jpg"
+        title: "LoGo",
+        description: "...",
+        link_into_github: "https://github.com/IvannaLitvynchuk/simple_pet_project",
+        link_into_site: "https://github.com/IvannaLitvynchuk/simple_pet_project",
+        image: require("../img/LoGo.jpeg")
     },
     {
         id: 4,
         title: "Project 4",
         description: "I did this project when I was studying the frontend on HyperSkill. I created a web page with flip-down flash cards,learned some HTML basics and learned that CSS can easily make a beautiful design.",
-        link_into_github: "https://github.com/IvannaLitvynchuk/Flashcards",
-        link_into_site: "https://github.com/IvannaLitvynchuk/Flashcards",
+        link_into_github: "https://github.com/IvannaLitvynchuk/vite_react_typescript_project/tree/master",
+        link_into_site: "https://github.com/IvannaLitvynchuk/vite_react_typescript_project/tree/master",
         image: "https://raw.githubusercontent.com/IvannaLitvynchuk/Portfolio/main/img/flashcards.jpg"
     },
     {

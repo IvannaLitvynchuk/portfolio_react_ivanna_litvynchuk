@@ -4,9 +4,9 @@ import { projects } from "../data/projects";
 const Modal = (props) => {
     
     const projectId = props.projectId;
-    // console.log(projectId)
+
     const item = projects.find(element => element.id === projectId)
-    // console.log(item)
+    
     return (
         <>
             <div>
